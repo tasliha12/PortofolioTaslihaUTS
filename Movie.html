@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MOVIE</title>
+  <link rel="icon" type="image/x-icon" href="Flower.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  } 
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p, label{color: #2d2d30;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  </style>
+</head>
+<body class="bg-1" id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage">
+              <img src="panda.png" width="30" height="30" alt="">
+            </a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="index.html">ABOUT</a></li>
+              <li><a href="index.html">GALLERY</a></li>
+              <li><a href="index.html">CONTACT</a></li>
+              <li><a href="Register.html">REGISTER</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="food.html">Food</a></li>
+                  <li><a href="Place.html">Place</a></li>
+                  <li><a href="Movie.html">Movie</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- List Container -->
+<div id="list">
+    <div class="container"></div>
+<div class="container text-center" style="padding-top: 50px;">
+    <h3>Movie</h3>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="./Movie/donal.jpeg" target="_blank">
+              <img src="./Movie/donal.jpeg" alt="anime" style="width: 100%;"><h6><span class="label label-warning">New</span></h6>
+              <div class="caption">
+                <p>Donald Duck</p>  
+                <p>This cartoon play on Monday</p>
+              </div>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-primary-xs">Play</button>
+                  <button type="button" class="btn btn-primary-xs">Download</button>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="./Movie/frozen.jpg" target="_blank">
+              <img src="./Movie/frozen.jpg" alt="Anime" style="width:100%"><h6><span class="label label-danger">Hot</span></h6>
+              <div class="caption">
+                <p>Frozen</p>  
+                <p>This cartoon play on Tuesday</p>
+              </div>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-primary-xs">Play</button>
+                  <button type="button" class="btn btn-primary-xs disabled">Download</button>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="./Movie/miki.jpg" target="_blank">
+              <img src="./Movie/miki.jpg" alt="Anime" style="width:100%"><h6><span class="label label-primary">On Air</span></h6>
+              <div class="caption">
+                <p>Mickey Mouse</p>  
+                <p>This cartoon play on Wednesday</p>
+              </div>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-primary-xs">Play</button>
+                  <button type="button" class="btn btn-primary-xs disabled">Download</button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="./Movie/nusa.jpg" target="_blank">
+              <img src="./Movie/nusa.jpg" alt="Anime" style="width:100%"><h6><span class="label label-success">End</span></h6>
+              <div class="caption">
+                <p>Nusa and Rara</p>  
+                <p>This cartoon play on thursday</p>
+              </div>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-primary-xs">Play</button>
+                  <button type="button" class="btn btn-primary-xs">Download</button>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="./Movie/pony.jpg" target="_blank">
+              <img src="./Movie/pony.jpg" alt="Anime" style="width:100%"><h6><span class="label label-info">Off</span></h6>
+              <div class="caption">
+                <p>Little Pony</p>  
+                <p>This cartoon play on Friday</p>
+              </div>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-primary-xs">Play</button>
+                  <button type="button" class="btn btn-primary-xs disabled">Download</button>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <a href="./Movie/tanled.jpg" target="_blank">
+              <img src="./Movie/tanled.jpg" alt="Anime" style="width:100%"><h6><span class="label label-default">Pre-Realese</span></h6>
+              <div class="caption">
+                <p>Talend</p>  
+                <p>This cartoon play on Saturday</p>
+              </div>
+              <div class="btn-group">
+                  <button type="button" class="btn btn-primary-xs">Play</button>
+                  <button type="button" class="btn btn-primary-xs disabled">Download</button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="container text-center">
+    <ul class="pagination">
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+    </ul>
+    <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+<!-- kolom komen req -->
+
+<footer>
+<div class="container">
+    <div class="container"></div>
+    <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+<!-- kolom chat kanan kiri -->
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">Reni</h4>
+        <p>Wah the movie is cool</p>
+      </div>
+    </div>
+    <hr>
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">Novi</h4>
+        <p>The movie is fantastic</p>
+      </div>
+    </div>
+    <hr>
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">ain</h4>
+        <p>can't wait another movie!</p>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+<footer class="text-center">
+  <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>by Tasliha</p>
+</footer>
+</footer>
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#home']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</html>

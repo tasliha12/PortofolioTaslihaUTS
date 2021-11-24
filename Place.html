@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- UTS TEK WEB -->
+  <title>UTS TASLIHA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 10px 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">
+        <img src="panda.png" width="30" height="30" alt="">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html">ABOUT</a></li>
+        <li><a href="index.html">GALLERY</a></li>
+        <li><a href="index.html">CONTACT</a></li>
+        <li><a href="Register.html">REGISTER</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="food.html">Food</a></li>
+            <li><a href="Place.html">Place</a></li>
+            <li><a href="Movie.html">Movie</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (GALLERY Section) -->
+<div id="Food" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">PLACE</h3>
+    <p class="text-center">Wonderland Indonesia</p>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./place/bali.jpg" alt="Bali" width="400" height="300">
+          <p><strong>Bali</strong></p>
+          <p></p>
+          <button class="btn" data-toggle="modal" data-target="#Bali">Click Here</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./place/bandung.jpg" alt="Bandung" width="400" height="300">
+          <p><strong>Bandung</strong></p>
+          <p> </p>
+          <button class="btn" data-toggle="modal" data-target="#Bandung">Click Here</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail pt-2">
+          <img src="./place/jkt.jpg" alt="Jakarta" width="400" height="300">
+          <p><strong>Jakarta</strong></p>
+          <p></p>
+          <button class="btn" data-toggle="modal" data-target="#Jakarta">Click Here</button>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./place/jogja.jpg" alt="Yogyakarta" width="400" height="300">
+          <p><strong>Yogaykarta</strong></p>
+          <p></p>
+          <button class="btn" data-toggle="modal" data-target="#Yogyakarta">Click Here</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./place/sby.jpg" alt="Surabaya" width="400" height="300">
+          <p><strong>Surabaya</strong></p>
+          <p></p>
+          <button class="btn" data-toggle="modal" data-target="#Surabaya">Click Here</button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail pt-2">
+          <img src="./place/smrg.jpg" alt="Semarang" width="400" height="300">
+          <p><strong>Semarang</strong></p>
+          <p></p>
+          <button class="btn" data-toggle="modal" data-target="#Semarang">Click Here</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="Bali" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <p>Bali is a province of Indonesia and the westernmost of the Lesser Sunda Islands. East of Java and west of Lombok, the province includes the island of Bali and a few smaller neighbouring islands, notably Nusa Penida, Nusa Lembongan, and Nusa Ceningan. The provincial capital, Denpasar, is the most populous city in the Lesser Sunda Islands and the second-largest, after Makassar, in Eastern Indonesia. The upland town of Ubud in Greater Denpasar is considered Bali's cultural centre. The province is Indonesia's main tourist destination, with a significant rise in tourism since the 1980s. Tourism-related business makes up 80% of its economy.
+              Bali is the only Hindu-majority province in Muslim-majority Indonesia, with 86.9% of the population adhering to Balinese Hinduism. It is renowned for its highly developed arts, including traditional and modern dance, sculpture, painting, leather, metalworking, and music. The Indonesian International Film Festival is held every year in Bali. Other international events held in Bali include the Miss World 2013 and 2018 Annual Meetings of the International Monetary Fund and the World Bank Group. In March 2017, TripAdvisor named Bali as the world's top destination in its Traveller's Choice award, which it also earned in January 2021. 
+              Bali is part of the Coral Triangle, the area with the highest biodiversity of marine species, especially fish and turtles In this area alone, over 500 reef-building coral species can be found. For comparison, this is about seven times as many as in the entire Caribbean Bali is the home of the Subak irrigation system, a UNESCO World Heritage Site. It is also home to a unified confederation of kingdoms composed of 10 traditional royal Balinese houses, each house ruling a specific geographic area. The confederation is the successor of the Bali Kingdom. The royal houses are not recognised by the government of Indonesia; however, they originated before Dutch colonisation 
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="Bandung" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <p>Bandung is the capital of West Java province in Indonesia and fourth-largest city in Indonesia. Greater Bandung is the country's second-largest metropolitan area with over 11 million inhabitants. Located 768 metres (2,520 feet) above sea level, the highest point in the North area with an altitude of 1,050 meters and the lowest in the South is 675 meters above sea level, approximately 140 kilometres (87 miles) southeast of Jakarta, Bandung has cooler year-round temperatures than most other Indonesian cities. The city lies on a river basin surrounded by volcanic mountains that provides a natural defense system, which was the primary reason for the Dutch East Indies government's plan to move the capital from Batavia (modern-day Jakarta) to Bandung.
+                The Dutch first established tea plantations around the mountains in the 18th century, and a road was constructed to connect the plantation area to the colonial capital Batavia (180 kilometres (112 miles) to the northwest). In the early 20th century the Dutch inhabitants of Bandung demanded the establishment of a municipality (gemeente), which was granted in 1906, and Bandung gradually developed into a resort city for plantation owners. Luxurious hotels, restaurants, cafés, and European boutiques were opened, leading the city to be nicknamed Parijs van Java (Dutch: "The Paris of Java").
+                After Indonesia declared independence in 1945, the city has experienced ongoing development and urbanisation, transforming from an idyllic town into a dense 16,500 people/km2 (per square kilometre) metropolitan area with living space for over 8 million people. New skyscrapers, high-rise buildings, bridges, and gardens have been constructed. Natural resources have been heavily exploited, particularly by conversion of the protected upland area into highland villas and real estate. Although the city has encountered many problems (ranging from waste disposal and floods, to a complicated traffic system resulting from a lack of road infrastructure), it still attracts large numbers of tourists, weekend sightseers, and migrants from other parts of Indonesia. In 2017 the city won a regional environmental sustainability award for having the cleanest air among major cities in ASEAN. The city is also known as a Smart City, leveraging technology to improve government services and social media, that alert residents to issues such as floods or traffic jams. Bandung is Indonesia's major technology center. The city is part of the UNESCO Creative Cities Network, which it joined in 2015.[11]
+                The first Asian-African Conference, the Bandung Conference, was hosted in Bandung by President Sukarno in 1955. Redevelopment of the existing Husein Sastranegara International Airport (BDO) was completed in 2016. To improve infrastructure, construction of the Jakarta-Bandung high-speed rail was started in 2016 and is projected to be completed in 2021. This is to be complemented by an indigenous type of Automated People Mover (APM) and Light Rail Transit (LRT). The new larger second airport, Bandung Kertajati International Airport (KJT) opened in June 2018, just in time for the 2018 Asian Games.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Jakarta" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <p>Jakarta officially the Special Capital Region of Jakarta (Indonesian: Daerah Khusus Ibukota Jakarta), is the capital and largest city of Indonesia. Lying on the northwest coast of Java (the world's most populous island), it is the largest city in Southeast Asia, and also serves as the diplomatic capital of ASEAN. Jakarta is the centre of the economy, culture and politics of Indonesia. It has province level status which had a population of 10,562,088 as of 2020. Although Jakarta extends over only 664.01 square kilometres (256.38 sq mi), and thus has the smallest area of any Indonesian province, its metropolitan area covers 9,957.08 square kilometres (3,844.45 sq mi), which includes the satellite cities Bogor, Depok, Tangerang, South Tangerang, and Bekasi, and has an estimated population of 35 million as of 2021, making it the largest urban area in Indonesia and Southeast Asia and the second-largest in the world (after Tokyo), with a current population of 33,718,269 as of 2020. Jakarta ranks first among the Indonesian states in human development index. Jakarta's business opportunities, and its ability to offer a potentially higher standard of living than is available in other parts of the country, have attracted migrants from across the Indonesian archipelago, making it a melting pot of numerous cultures.
+                Jakarta is one of the oldest continuously inhabited cities in Southeast Asia. Established in the fourth century as Sunda Kelapa, the city became an important trading port for the Sunda Kingdom. At one time, it was the de facto capital of the Dutch East Indies, when it was known as Batavia. Jakarta was officially a city within West Java until 1960, when its official status was changed to a province with special capital region distinction. As a province, its government consists of five administrative cities and one administrative regency. Jakarta is an alpha world city and is the seat of the ASEAN secretariat, Financial institutions such as the Bank of Indonesia, Indonesia Stock Exchange, and corporate headquarters of numerous Indonesian companies and multinational corporations are located in the city. In 2017, the city's GRP PPP was estimated at US$483.4 billion.
+                Jakarta's primary challenges include rapid urban growth, ecological breakdown, gridlocked traffic, congestion, and flooding. Jakarta is sinking up to 17 cm (6.7 inches) per year, which, coupled with the rising of sea levels, has made the city more prone to flooding. It is one of the fastest-sinking capitals in the world. In August 2019, as a result of these challenges, President Joko Widodo announced that the capital of Indonesia would be moved from Jakarta to the province of East Kalimantan on the island of Borneo. The city has over 35 colleges and universities, including University of Indonesia, State University of Jakarta and the University of National Development "Veteran" Jakarta.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Yogyakarta" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <p>Yogyakarta is the capital city of Special Region of Yogyakarta in Indonesia, on the island of Java. As the only Indonesian royal city still ruled by a monarchy, Yogyakarta is regarded as an important centre for classical Javanese fine arts and culture such as ballet, batik textiles, drama, literature, music, poetry, silversmithing, visual arts, and wayang puppetry. Renowned as a centre of Indonesian education, Yogyakarta is home to a large student population and dozens of schools and universities, including Gadjah Mada University, the country's largest institute of higher education and one of its most prestigious.
+                Yogyakarta is the capital of the Yogyakarta Sultanate and served as the Indonesian capital from 1946 to 1948 during the Indonesian National Revolution, with Gedung Agung as the president's office. One of the districts in southeastern Yogyakarta, Kotagede, was the capital of the Mataram Sultanate between 1587 and 1613.
+                The city's population was 388,627 at the 2010 Census, and 373,589 at the 2020 Census Its metropolitan area was home to 4,010,436 inhabitants in 2010, which includes the city of Magelang and 65 districts across Sleman, Klaten, Bantul, Kulon Progo and Magelang Regency. Yogyakarta has one of the highest HDI (Human Development Index) in Indonesia. To rapidly jumpstart the economy, plan for 2nd phase Indonesia high speed train via Southbound is currently being developed from Bandung to Yogyakarta & Solo initiating construction by 2020, which projected to be completed by 2024 
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Surabaya" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <p>Surabaya is the capital of the Indonesian province of East Java and the second-largest city in Indonesia, after Jakarta. Located on the northeastern border of Java island, on the Madura Strait, it is one of the earliest port cities in Southeast Asia. According to the National Development Planning Agency, Surabaya is one of the four main central cities of Indonesia, alongside Jakarta, Medan, and Makassar. The city has a population of 2.87 million within its city limits at the 2020 Census and 9.5 million in the extended Surabaya metropolitan area, making it the third-largest metropolitan area in Indonesia.[11]
+                The city was settled in the 10th century by the Kingdom of Janggala, one of the two Javanese kingdoms that was formed in 1045 when Airlangga abdicated his throne in favor of his two sons. In the late 15th and 16th centuries, Surabaya grew to be a duchy, a major political and military power as well as a port in eastern Java, probably under the Majapahit empire. At that time, Surabaya was already a major trading port, owing to its location on the River Brantas delta and the trade route between Malacca and the Spice Islands via the Java Sea. During the decline of Majapahit, the lord of Surabaya resisted the rise of the Demak Sultanate and only submitted to its rule in 1530. Surabaya became independent after the death of Sultan Trenggana of Demak in 1546.
+                From the 18th century until the mid-20th century, Surabaya was the largest city in the Dutch East Indies, and the center of trading in the Indonesian archipelago, which was then a competitor to Shanghai and Hong Kong. The city is known as Kota Pahlawan (the city of heroes) due to the importance of the Battle of Surabaya during the Indonesian National Revolution. The city is one of the important financial, commercial, industrial, transportation, and entertainment hubs of the archipelago. arguably second only to Jakarta, and the Port of Tanjung Perak is Indonesia's second-busiest seaport located on northern Surabaya. The city is also known for being one of the cleanest and greenest in Indonesia.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Semarang" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <p>Semarang is the capital and largest city of Central Java province in Indonesia. It was a major port during the Dutch colonial era, and is still an important regional center and port today. The city has been named as the cleanest tourist destination in Southeast Asia by the ASEAN Clean Tourist City Standard (ACTCS) for 2020–2022.
+                It has an area of 373.78 km2 (144.32 sq mi) and is located at 6°58′S 110°25′E. The population of the city was 1,555,984 at the 2010 Census and 1,653,524 at the 2020 Census, making it Indonesia's ninth most populous city after Jakarta, Surabaya, Bekasi, Bandung, Medan, Depok, Tangerang and Palembang. The built-up urban area had 3,183,516 inhabitants at the 2010 census spread over two cities and 26 districts. The Semarang metropolitan area (a.k.a. Kedungsapur) has a population of over 6 million in 2020 (see Greater Semarang section). The population of the city is predominantly Javanese with significant Chinese presence.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Made Tasliha </p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>

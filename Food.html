@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- UTS TEK WEB -->
+  <title>UTS TASLIHA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 10px 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">
+        <img src="panda.png" width="30" height="30" alt="">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html">ABOUT</a></li>
+        <li><a href="index.html">GALLERY</a></li>
+        <li><a href="index.html">CONTACT</a></li>
+        <li><a href="Register.html">REGISTER</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="food.html">Food</a></li>
+            <li><a href="Place.html">Place</a></li>
+            <li><a href="Movie.html">Movie</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Container (GALLERY Section) -->
+<div id="Food" class="bg-1">
+    <div class="container">
+      <h3 class="text-center">FOOD</h3>
+      <p class="text-center">Look my gallery food !</p>
+      
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="./food/ayam.jpg" alt="Ayam" width="400" height="300">
+            <p><strong>Fried Chicken</strong></p>
+            <p>Fried Chicken is very tasty because so crispy</p>
+            <button class="btn" data-toggle="modal" data-target="#Ayam">Recipe</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="./food/burger.jpg" alt="Burger" width="400" height="300">
+            <p><strong>Burger</strong></p>
+            <p>Burger is very tasty because the cheese so melting </p>
+            <button class="btn" data-toggle="modal" data-target="#Burger">Recipe</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail pt-2">
+            <img src="./food/kebab.jpg" alt="Kebab" width="400" height="300">
+            <p><strong>Kebab</strong></p>
+            <p>Kebab is very tasty because the meat is tender</p>
+            <button class="btn" data-toggle="modal" data-target="#Kebab">Recipe</button>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="./food/bakso.jpg" alt="Bakso" width="400" height="300">
+            <p><strong>Meatball</strong></p>
+            <p>Meatball is very tasty because a lot of a micin</p>
+            <button class="btn" data-toggle="modal" data-target="#Bakso">Recipe</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="./food/mi.jpg" alt="Mie" width="400" height="300">
+            <p><strong>Noodle</strong></p>
+            <p>Noodle is very tasty because its chewy and hot </p>
+            <button class="btn" data-toggle="modal" data-target="#Mie">Recipe</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail pt-2">
+            <img src="./food/nasgor.jpg" alt="Nasgor" width="400" height="300">
+            <p><strong>Nasgor</strong></p>
+            <p>Friedrice is very tasty because its Indonesian food</p>
+            <button class="btn" data-toggle="modal" data-target="#Nasgor">Recipe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="Ayam" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <img src="./food/ayam.jpg" alt="Ayam" width="350" height="">
+            <p>•	6 chicken thighs
+                •	6 chicken drumsticks
+                •	3 cups buttermilk
+                •	1/2 cup Buffalo Hot Sauce optional
+                •	2 teaspoons salt
+                •	1 teaspoon pepper
+                Dredging Mixture
+                •	3 cups all-purpose flour
+                •	1/2 cup cornstarch
+                •	1 tablespoon salt
+                •	1 tablespoon paprika
+                •	2 teaspoons onion powder
+                •	2 teaspoons garlic powder
+                •	1 teaspoon dried oregano
+                •	1 teaspoon dried basil
+                •	1 teaspoon white pepper
+                •	1 teaspoon cayenne pepper
+                •	1 quart vegetable oil for frying
+                INSTRUCTIONS
+                1.	In a large mixing bowl, whisk together buttermilk, hot sauce (optional, for added flavor), salt, and pepper in a mixing bowl. Add in chicken pieces. Cover the bowl with plastic wrap and refrigerate 4 hours.
+                2.	When ready to cook, pour the vegetable oil in a skillet until it is about 3/4 inch deep. Heat to 350 degrees.
+                3.	Prepare the breading by combining the flour, cornstarch, onion powder, garlic powder, oregano, basil, white pepper, cayenne pepper, paprika, and salt in a gallon sized resealable plastic bag or shallow dish. Mix it thoroughly.
+                4.	Working one at a time, remove chicken pieces from buttermilk mixture. Shake it gently to remove the excess. Place it in the breading mix and coat thoroughly. Tap off the excess.
+                5.	Place the breaded chicken into the 350 degree oil. Fry 3 or 4 pieces at a time. The chicken will drop the temperature of the oil so keep it as close to 350 degrees as possible. Fry each piece for 14 minutes, turning each piece about half way through, until the chicken reaches an internal temperature of 165 degrees F. 
+                6.	Remove from the oil and place on paper towels. Let them rest for at least 10 minutes before serving. 
+                </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="Burger" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img src="./food/burger.jpg" alt="Burger" width="350" height="">
+              <p>Ingredients
+                •	Ingredient Checklist
+                •	1 pound ground lean (7% fat) beef
+                •	1 large egg
+                •	½ cup minced onion
+                •	¼ cup fine dried bread crumbs
+                •	1 tablespoon Worcestershire
+                •	1 or 2 cloves garlic, peeled and minced
+                •	About 1/2 teaspoon salt
+                •	About 1/4 teaspoon pepper
+                •	4 hamburger buns (4 in. wide), split
+                •	About 1/4 cup mayonnaise
+                •	About 1/4 cup ketchup
+                •	4 iceberg lettuce leaves, rinsed and crisped
+                •	1 firm-ripe tomato, cored and thinly sliced
+                •	4 thin slices red onion
+                
+                Step 1
+                In a bowl, mix ground beef, egg, onion, bread crumbs, Worcestershire, garlic, 1/2 teaspoon salt, and 1/4 teaspoon pepper until well blended. Divide mixture into four equal portions and shape each into a patty about 4 inches wide.
+                Step 2
+                Lay burgers on an oiled barbecue grill over a solid bed of hot coals or high heat on a gas grill (you can hold your hand at grill level only 2 to 3 seconds); close lid on gas grill. Cook burgers, turning once, until browned on both sides and no longer pink inside (cut to test), 7 to 8 minutes total. Remove from grill.
+                Step 3
+                Lay buns, cut side down, on grill and cook until lightly toasted, 30 seconds to 1 minute
+                Step 4
+                Spread mayonnaise and ketchup on bun bottoms. Add lettuce, tomato, burger, onion, and salt and pepper to taste. Set bun tops in place.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Kebab" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img src="./food/kebab.jpg" alt="Kebab" width="350" height="">
+              <p>Marinade Ingredients:
+                1/3 cup olive oil
+                1/3 cup soy sauce
+                3 Tbsp merlot vinegar
+                1/4 cup honey
+                2 cloves garlic, minced
+                1 Tbsp minced fresh ginger
+                Kebab Ingredients:
+                1 1/2 lbs leading sirloin steak, cut into 1 1/2-inch cubes
+                1 big bell pepper
+                1-2 medium red onions
+                1/2 to a pound button mushrooms
+                About 20 bamboo or wooden skewers
+                Directions:
+                1. Mix the marinade components together in a bowl and extra the meat. Cover and chill in the refrigerator for a minimum of Thirty Minutes, ideally a number of hours and even over night. (Heck, I've kept the meat marinading for a couple days, still terrific.).
+                2. Soak the skewers in water for a minimum of 30 minutes prior to barbecuing. This will certainly assist avoid them from totally burning up on the grill.
+                3. Cut the veggies into portions about the width of the beef pieces. Making sure not to jab yourself, thread the meat and veggies onto double bamboo skewers. One method to do this securely is to put the piece that you are attempting to pierce on a cutting board, and afterwards press the skewers through the piece to the board. Utilizing double skewers will certainly assist you turn the kebabs on the grill. If you keep a little area in between the pieces, they will certainly barbecue more equally.
+                4. Prepare your grill for high, direct heat. Grill for 8 to 10 minutes, depending upon how hot your grill is, and how done you would like your meat, turning sometimes. Let rest for 5 minutes prior to serving.
+                5. Utilizing double skewers will certainly assist you turn the kebabs on the grill. If you keep a little area in between the pieces, they will certainly barbecue more equally. Grill for 8 to 10 minutes, depending on how hot your grill is, and how done you would like your meat, turning sometimes.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Bakso" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img src="./food/bakso.jpg" alt="Bakso" width="350" height="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Mie" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img src="./food/mi.jpg" alt="Mie" width="350" height="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="Nasgor" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img src="./food/nasgor.jpg" alt="Nasgor" width="350" height="">
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>By Tasliha </p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
